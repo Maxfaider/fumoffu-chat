@@ -1,0 +1,9 @@
+# ======= Eclipse file(s) =========
+bin/
+.settings/
+.project
+
+
+# ====== Nodejs ========
+node_modules/
+dist/

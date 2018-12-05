@@ -1,0 +1,79 @@
+@mixin avatar-base($size: 1.6rem) {
+    font-size: $size / 2;
+    height: $size;
+    width: $size;
+}
+
+.avatar {
+    @include avatar-base();
+    color: white;
+    background: #95a5a6;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+  
+    &.avatar-xs {
+      @include avatar-base(.8rem);
+    }
+    &.avatar-sm {
+      @include avatar-base(2.0rem);
+    }
+    &.avatar-lg {
+      @include avatar-base(2.4rem);
+    }
+    &.avatar-xl {
+      @include avatar-base(3.2rem);
+    }
+  
+    img {
+      border-radius: 50%;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      z-index: 3;
+    }
+  
+    .avatar-icon,
+    .avatar-presence {
+      bottom: 14.64%;
+      height: 50%;
+      padding: .1rem;
+      position: absolute;
+      right: 14.64%;
+      transform: translate(50%, 50%);
+      width: 50%;
+      z-index: 4;
+    }
+  
+    .avatar-presence {
+      border-radius: 50%;
+      height: .5em;
+      width: .5em;
+  
+      &.online {
+        background: #32b643;
+      }
+  
+      &.busy {
+        background: #ffb700;
+      }
+  
+      &.away {
+        background: #e85600;
+      }
+    }
+  
+    &[data-initial]::before {
+      color: currentColor;
+      content: attr(data-initial);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+    }
+  }
