@@ -1,0 +1,21 @@
+.chat-zone {
+    display: flex;
+    flex-grow: 1;
+
+    .friends-zone {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        background-color: #FFFFFF;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.4);
+        z-index: 2;
+    }
+
+    .conversation-zone {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        background-color: #F7F7F7;
+    }
+
+}
