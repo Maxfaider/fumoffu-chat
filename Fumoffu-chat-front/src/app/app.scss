@@ -1,0 +1,56 @@
+.chat {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+
+    .navbar {
+        display: flex; 
+        flex-direction: column;
+        width: 60px;
+        background-color: #FFFFFF;
+        box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.4);
+        z-index: 4;
+
+        .user-status {
+            display: flex;
+            height: 10%;
+            padding-right: 1px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu {
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            align-items: center;
+            padding-top: 20px;
+        }
+        
+        .menu-item {
+            display: flex;
+            color: gray;
+            width: 70%;
+            height: 40px;
+            margin-top: 40px;
+            margin-bottom: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: center;
+
+            .options-item {
+                color: gray;
+            }
+        }
+        
+        .select {
+            background-color: #EAF6EB;
+        }
+    }
+}
