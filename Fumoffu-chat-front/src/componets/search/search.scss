@@ -1,0 +1,19 @@
+.search {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-text {
+    background-color: #FAFAFA;
+    background-image:  url(./search.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding-left: 50px;
+    padding-bottom: 2px;
+    border: 1px solid #DADADA;
+    width: 90%;
+    height: 36px;
+    border-radius: 15px;
+}

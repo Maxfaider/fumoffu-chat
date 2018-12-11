@@ -1,0 +1,46 @@
+.conversation-menu {
+    display: flex;
+    height: 10%;
+    border-bottom: 1.5px solid #C0C0C0;
+    align-items: stretch;
+
+    .user-indentifier {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+    
+        .title {
+            color: #353b48;
+            font-size: 18px;
+            margin-left: 4.5%;
+            margin-top: 4%;
+            margin-bottom: 1%;
+        }
+    
+        .subtitle {
+            color: gray;
+            font-size: 14px;
+            margin-left: 4.5%;
+        }
+    }
+    
+    .btn-conversation-menu {
+        border: none;
+        background-color: #F7F7F7;
+        padding-top: 6px;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .btn-gray {
+        color: #C0C0C0;
+        padding: 1px;
+        padding-left: 8px;
+    }
+    
+    .font-large {
+        font-size: 26px;
+    }
+}
+
+
