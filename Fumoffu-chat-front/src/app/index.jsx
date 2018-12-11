@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Viewbuilder from '../views/viewbuilder';
+
 import './app.scss';
 
 export default class App extends Component {
@@ -20,9 +22,10 @@ export default class App extends Component {
                         <div className="menu-item"> <i className="large material-icons"> settings </i> </div>
                     </section> 
                     <section className="options">
-                        <div className="options-item"> <i class="large material-icons"> exit_to_app </i> </div>
+                        <div className="options-item"> <i className="large material-icons"> exit_to_app </i> </div>
                     </section> 
                 </div>
+                { Viewbuilder.createChatZone() }
             </div>
         )
     }
