@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CSPWebpackPlugin = require('csp-webpack-plugin');
 
 module.exports = {
     entry: { main: './src/index.jsx' },
@@ -36,6 +37,12 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin( { template: './src/assets/index.html' } ),
+        new CSPWebpackPlugin({
+            'object-src': '\'none\'',
+            'base-uri': '\'self\'',
+            'script-src': ['\'unsafe-inline\'', '\'self\'', '\'unsafe-eval\''],
+            'worker-src': ['\'self\'','blob:']
+        }),
         new MiniCssExtractPlugin({
             filename: '[name]_[hash].css',
             chunkFilename: '[id]_[hash].css'
