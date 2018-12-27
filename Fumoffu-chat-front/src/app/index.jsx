@@ -8,19 +8,8 @@ import './app.scss';
 export default class App extends Component {
     constructor(props) {
         super(props);
-        this.status = {
-            currentView: 'ChatZone'
-        }
-        
-        this.onShowView.bind(this);
     }
-    
-    onShowView(evt) {
-        console.log(evt.target.name);
-        //if(nameView !== this.status.currentView)
-        //    this.status.currentView = nameView;
-    }
-    
+
     render() {
         return (
             <BrowserRouter>
