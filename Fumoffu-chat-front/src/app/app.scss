@@ -17,6 +17,7 @@
             padding-right: 1px;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
         }
         
         .menu {
@@ -29,6 +30,8 @@
         
         .menu-item {
             display: flex;
+            border: none;
+            background-color: #FFFFFF;
             color: gray;
             width: 70%;
             height: 40px;
@@ -36,6 +39,11 @@
             margin-bottom: 5px;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                color: #2ecc71;
+            }
         }
 
         .options {
@@ -45,7 +53,14 @@
             align-items: center;
 
             .options-item {
+                border: none;
+                background-color: #FFFFFF;
                 color: gray;
+                cursor: pointer;
+
+                &:hover {
+                    color: #2ecc71;
+                }
             }
         }
         
