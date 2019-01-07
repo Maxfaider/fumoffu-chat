@@ -30,16 +30,16 @@
         padding-top: 6px;
         text-align: center;
         flex-grow: 1;
-    }
-
-    .btn-gray {
         color: #C0C0C0;
-        padding: 1px;
-        padding-left: 8px;
-    }
-    
-    .font-large {
-        font-size: 26px;
+        cursor: pointer;
+
+        &:hover {
+            color: #2ecc71;
+        }
+        
+        .font-large {
+            font-size: 26px;
+        }
     }
 }
 
