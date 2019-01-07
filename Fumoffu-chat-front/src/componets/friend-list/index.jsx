@@ -7,34 +7,20 @@ import './friend-list.scss';
 export default class FriendList extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            cards: [
-                {
-                    id: "asfrt345",
-                    profileUrl: "",
-                    title: "Alan M.E",
-                    subtitle: "Maxfaider",
-                    date: "5min ago",
-                    lastMessage: "Pellentesque dictum suscipit congue."
-                },
-                {
-                    id: "asft213",
-                    profileUrl: "",
-                    title: "James Gordon",
-                    subtitle: "Dectective",
-                    date: "2h ago",
-                    lastMessage: "Pellentesque dictum suscipit congue."
-                }
-            ]
-        }
+
+        this.onSelectFriendEventHandle = this.onSelectFriendEventHandle.bind(this);
+    }
+
+    onSelectFriendEventHandle(friend) {
+        this.props.selectFriendEventHandle(friend);
     }
 
     render() {
         return (
             <section className="friends-list">
-                { this.state.cards.map( (item) => {
+                { this.props.friends.map( (item) => {
                     return (
-                        <Card  key = {item.id}  friend = {item} />
+                        <Card  key = {item.id}  friend = {item} clickEventHandle = {this.onSelectFriendEventHandle} />
                     )     
                 })}
             </section>
