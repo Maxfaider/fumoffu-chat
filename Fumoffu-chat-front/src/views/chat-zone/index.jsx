@@ -25,7 +25,7 @@ export default class ChatZone extends Component {
                 username: "Alan M.E",
                 nickname: "Maxfaider",
                 date: "5min ago",
-                lastMessage: "Pellentesque dictum suscipit congue."
+                lastMessage: "Suspendisse sed faucibus."
             },
             friends: [
                 {
@@ -34,7 +34,7 @@ export default class ChatZone extends Component {
                     username: "Alan M.E",
                     nickname: "Maxfaider",
                     date: "5min ago",
-                    lastMessage: "Pellentesque dictum suscipit congue."
+                    lastMessage: "Suspendisse sed faucibus."
                 },
                 {
                     id: "asft213",
@@ -43,6 +43,50 @@ export default class ChatZone extends Component {
                     nickname: "Dectective",
                     date: "2h ago",
                     lastMessage: "Pellentesque dictum suscipit congue."
+                }
+            ],
+            messages: [
+                {
+                    id: "yerifn",
+                    owner: "own",
+                    body: "Vestibulum finibus ante nec pellentesque convallis.",
+                    content_type: "text",
+                    date: "Friday at 12:20 PM"
+                },
+                {
+                    id: "gjtidm",
+                    owner: "own",
+                    body: "finibus?",
+                    content_type: "text",
+                    date: "Friday at 12:21 PM"
+                },
+                {
+                    id: "gufnddo3",
+                    owner: "his",
+                    body: "Suspendisse sed faucibus lectus, eget viverra leo.",
+                    content_type: "text",
+                    date: "Friday at 12:26 PM"
+                },
+                {
+                    id: "tufnsa",
+                    owner: "his",
+                    body: "Vivamus ante mauris.",
+                    content_type: "text",
+                    date: "Friday at 12:26 PM"
+                },
+                {
+                    id: "uttofna",
+                    owner: "his",
+                    body: "Cras semper tincidunt ipsum non rhoncus.",
+                    content_type: "text",
+                    date: "Friday at 12:26 PM"
+                },
+                {
+                    id: "rudpda",
+                    owner: "own",
+                    body: "Suspendisse sed faucibus",
+                    content_type: "text",
+                    date: "Friday at 12:31 PM"
                 }
             ]
         }
@@ -99,7 +143,7 @@ export default class ChatZone extends Component {
             <section className="chat-zone">
                 <section className="friends-zone"> 
                     <Search filterFriendHandle={this.onFilterFriend}/>
-                    <FriendList friends={this.state.friends} selectFriendEventHandle={this.onSelectFriend}/>
+                    <FriendList friends={this.state.friends} friendSelect={this.state.friendCurrent} selectFriendEventHandle={this.onSelectFriend}/>
                     <section className="add-friends">
                         <button onClick={this.onAddFriend} className="btn-round-add"><i className="material-icons"> add </i></button>
                     </section>
@@ -109,7 +153,7 @@ export default class ChatZone extends Component {
                         keyboardVoiceHandle={this.onSendVoiceMessage}
                         videoCamHandle={this.onVideoCall} 
                         moreOptionsHandle={this.onMoreOptions} />
-                    <ConversationMessages />
+                    <ConversationMessages friend={this.state.friendCurrent} messages={this.state.messages} />
                     <form className="conversation-sender-zone" onSubmit={this.onSendMessage}>
                         <button onClick={this.onAttachmentFile} className="btn-attachment"><i className="material-icons"> attachment </i></button>
                         <input onChange={this.onChangeTxtMessage} className="text-sender" type="text" name="txtMessage" placeholder="Type your message here" />
