@@ -7,7 +7,7 @@ import './card.scss';
 class Card extends Component {
     constructor(props) {
         super(props);
-
+        
         this.sendEventClick = this.sendEventClick.bind(this);
     }
 
@@ -16,8 +16,13 @@ class Card extends Component {
     }
     
     render() {
+        if(this.props.active)
+            this.style = "card select";
+        else
+            this.style = "card";
+
         return (
-            <div className="card">
+            <div className={this.style}>
                 <div className="card-header">
                     <Avatar username={ this.props.friend.username } profileUrl={ this.props.friend.profileUrl } />
                     <div onClick={ this.sendEventClick } className="card-user">
