@@ -19,9 +19,9 @@ export default class FriendList extends Component {
         return (
             <section className="friends-list">
                 { this.props.friends.map( (item) => {
-                    return (
-                        <Card  key = {item.id}  friend = {item} clickEventHandle = {this.onSelectFriendEventHandle} />
-                    )     
+                    if(item.id === this.props.friendSelect.id)
+                        return <Card  key = {item.id} active={true} friend = {item} clickEventHandle = {this.onSelectFriendEventHandle} />
+                    return <Card  key = {item.id} friend = {item} clickEventHandle = {this.onSelectFriendEventHandle} />  
                 })}
             </section>
         )
