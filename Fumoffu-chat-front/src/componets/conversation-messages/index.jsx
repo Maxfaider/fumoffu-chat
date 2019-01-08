@@ -19,6 +19,7 @@ export default class ConversationMessages extends Component {
     buildMessageFriendWithAvatar(id, body) {
         return <MessageFriend 
             key={ id }
+            isProfile={ true }
             text={ body } 
             username={ this.props.friend.username } 
             profileUrl={ this.props.friend.profileUrl } />
@@ -34,6 +35,7 @@ export default class ConversationMessages extends Component {
     buildMessageFriendWithAvatarAndDate(id, body, date) {
         return <MessageFriend 
             key={ id }
+            isProfile={ true }
             text={ body } 
             username={ this.props.friend.username } 
             profileUrl={ this.props.friend.profileUrl } 
