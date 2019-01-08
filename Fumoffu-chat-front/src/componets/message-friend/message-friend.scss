@@ -1,0 +1,43 @@
+.message-friend {
+    display: flex;
+    align-self: flex-start;
+    width: 85%;
+
+    figure {
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .text {
+        background-color: #7bed9f;
+        margin-bottom: 2%;
+        border-radius: 5px;
+        border: 2px solid #7bed9f;
+        box-shadow: 5px 10px 8px -5px #888888;
+        padding: 1%;
+        max-width: 90%;
+        color: #353b48;
+    }
+    
+    .text-only {
+        background-color: #7bed9f;
+        margin-bottom: 1.2%;
+        margin-left: 58px;
+        border-radius: 5px;
+        border: 2px solid #7bed9f;
+        box-shadow: 5px 10px 8px -5px #888888;
+        padding: 1%;
+        max-width: 90%;
+        color: #353b48;
+    }
+}
+
+.message-friend-date {
+    margin-left: 58px;
+    margin-top: 6px;
+    margin-bottom: 1px;
+    color: #888888;
+    font-size: 12px;
+}
+
