@@ -15,7 +15,6 @@ export default class MessageFriend extends Component {
     }
 
     buildMessagewithAvatar() {
-        console.log(this.props.username);
         return (
             <div className="message-friend">
                 <Avatar username={ this.props.username } profileUrl={ this.props.profileUrl }/>
