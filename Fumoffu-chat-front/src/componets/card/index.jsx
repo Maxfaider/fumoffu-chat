@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Avatar from '../avatar';
+
 import './card.scss';
 
 class Card extends Component {
@@ -7,26 +9,6 @@ class Card extends Component {
         super(props);
 
         this.sendEventClick = this.sendEventClick.bind(this);
-    }
-
-    buildAvatar() {
-        var nameShort = this.props.friend.username
-            .substr(0, 3)
-            .toUpperCase();
-
-        if (this.props.friend.profileUrl)
-            return (
-                <figure className="avatar avatar-lg">
-                    <img src={this.props.friend.profileUrl} alt={nameShort}></img>
-                    <i className="avatar-presence online"></i>
-                </figure>
-            )
-        else 
-            return (
-                <figure className="avatar avatar-lg" data-initial={nameShort}>
-                    <i className="avatar-presence online"></i>
-                </figure>
-            )
     }
 
     sendEventClick() {
@@ -37,7 +19,7 @@ class Card extends Component {
         return (
             <div className="card">
                 <div className="card-header">
-                    { this.buildAvatar() }
+                    <Avatar username={ this.props.friend.username } profileUrl={ this.props.friend.profileUrl } />
                     <div onClick={ this.sendEventClick } className="card-user">
                         <div className="card-title"> { this.props.friend.username } </div>
                         <div className="card-subtitle">{ this.props.friend.nickname }</div>
