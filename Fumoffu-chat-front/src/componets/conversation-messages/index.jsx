@@ -55,9 +55,14 @@ export default class ConversationMessages extends Component {
             date={ date } />
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        var panel = document.getElementById("messages");
+        panel.scrollTop = panel.scrollHeight;
+    }
+
     render() {
         return (
-            <section className="conversation-messages">
+            <section id="messages" className="conversation-messages">
                 { this.props.messages.map( (message, index, arrMessages) => {
                     if (message.owner === 'own') {
                         if(arrMessages[ index + 1] && arrMessages[ index + 1 ].owner === 'own') 
